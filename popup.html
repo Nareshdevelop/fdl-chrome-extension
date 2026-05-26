@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fivedaylaunch site score</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; width: 340px; color: #0f172a; background: #f8fafc; }
+  .wrap { padding: 18px; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .top .brand { font-weight: 800; font-size: 14px; color: #0ea5e9; letter-spacing: -0.01em; }
+  .top .domain { font-size: 12px; color: #64748b; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .scorecard { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; text-align: center; }
+  .score-num { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .score-of { font-size: 12px; color: #64748b; margin-top: 4px; }
+  .grade { display: inline-block; margin-top: 8px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .grade.A { background: #d1fae5; color: #065f46; }
+  .grade.B { background: #dbeafe; color: #1e40af; }
+  .grade.C { background: #fef3c7; color: #92400e; }
+  .grade.D, .grade.F { background: #fee2e2; color: #991b1b; }
+  .bars { margin-top: 16px; }
+  .bar { display: grid; grid-template-columns: 80px 1fr 30px; align-items: center; gap: 8px; padding: 6px 0; font-size: 12px; color: #475569; }
+  .bar-track { height: 6px; background: #f1f5f9; border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; transition: width .5s ease; }
+  .findings { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5e7eb; }
+  .findings h3 { font-size: 11px; text-transform: uppercase; color: #64748b; margin-bottom: 6px; letter-spacing: 0.04em; }
+  .findings li { font-size: 12px; color: #334155; margin: 4px 0 4px 14px; }
+  .cta { display: block; margin-top: 14px; background: #0ea5e9; color: white; padding: 11px; text-align: center; border-radius: 8px; font-weight: 600; font-size: 13px; text-decoration: none; }
+  .cta:hover { background: #0284c7; }
+  .secondary { display: block; margin-top: 8px; text-align: center; font-size: 12px; color: #0ea5e9; text-decoration: none; }
+  .secondary:hover { text-decoration: underline; }
+  .loader { text-align: center; padding: 40px 20px; color: #64748b; font-size: 13px; }
+  .loader .dots::after { content: "..."; display: inline-block; animation: dots 1.4s steps(4) infinite; overflow: hidden; vertical-align: bottom; width: 14px; }
+  @keyframes dots { 0% { width: 0; } 100% { width: 14px; } }
+  .error { padding: 24px; text-align: center; color: #64748b; }
+  .error .title { font-weight: 600; color: #0f172a; margin-bottom: 8px; }
+  .footer { margin-top: 14px; text-align: center; font-size: 10px; color: #94a3b8; }
+  .footer a { color: #94a3b8; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">fivedaylaunch</div>
+    <div class="domain" id="domain">—</div>
+  </div>
+  <div id="content">
+    <div class="loader">Scoring this site<span class="dots"></span></div>
+  </div>
+  <div class="footer">
+    <a href="https://fivedaylaunch.com/sites" target="_blank">Registry</a> ·
+    <a href="https://fivedaylaunch.com" target="_blank">$799 rebuild</a>
+  </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
